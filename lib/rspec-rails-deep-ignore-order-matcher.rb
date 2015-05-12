@@ -1,14 +1,14 @@
-require 'rspec'
-require 'rspec-deep-ignore-order-matcher/version'
+require 'rspec-rails'
+require 'rspec-rails-deep-ignore-order-matcher/version'
 
 RSpec::Matchers.define :be_deep_equal do |expected|
 	match { |actual| m? actual, expected }
 
-	failure_message_for_should do |actual|
+	failure_message do |actual|
 		"expected that #{actual} would be deep equal with #{expected}"
 	end
 
-	failure_message_for_should_not do |actual|
+	failure_message_when_negated do |actual|
 		"expected that #{actual} would not be deep equal with #{expected}"
 	end
 

@@ -1,5 +1,5 @@
-require 'rspec'
-require 'rspec-deep-ignore-order-matcher'
+require 'rspec-rails'
+require 'rspec-rails-deep-ignore-order-matcher'
 
 describe Deep::Ignore::Order::Matcher do
 
